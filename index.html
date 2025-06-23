@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Primarycolor Prints</title>
+    <style>
+        
+    </style>    
+</head>
+
+<body>
+    <div class="tooltip" id="tooltip">Visit Website</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <header>
+        <img src="img/pcpi.png" alt="Logo" class="logo">
+    </header>
+    
+    <div class="bg-image" ></div>
+    <div class="overlay-text">
+    <section class="slide-in">
+    <h1>YOUR PRIMARY PRINT PARTNER</h1>
+    
+    <p> 
+        PrimaryColor Prints Inc. is your one-stop shop for all your commercial and large format printing needs. Our state-of-the-art printing equipment and 
+        expert team ensure high- quality prints every time.</p>  <p> We specialize in creating eye-catching marketing materials, from business cards and brochures 
+        to banners and signages.</p>  <p> Let us help you make a lasting impression with our top-notch printing and installation services. Get in touch with us to start your project!
+
+        </p>
+        <img src="img/patty.png" class="rotating-image" id="patty">`
+        <p>PATRICIA GAMBOA <BR>
+        PRESIDENT</p>
+    </section>
+    
+    </div>
+   
+</div>
+    <div class="container">
+        <section id="about" class="about">
+            <h2 class="autoshow">ABOUT US</h2>
+            <p class="autoshow">
+                PrimaryColor Prints Inc. (PCPI) is a print service company dedicated to providing innovative solutions to our customers' prepress and printing requirements.<br>
+                <br>
+                <p class="autoshow">Founded on June 14th, 2009, PCPI began as a Prepress company servicing offset print houses in Makati, 
+                which included desktop publishing, color matching, color proofing, imposition of artworks for press, and other prepress activities.<br>
+                <br>
+                </p>
+                <p class="autoshow">As PCPI's customer base grew and the demand for low-volume prints increased, the company expanded its services and ventured into new markets. 
+                In April 2012, PCPI acquired a new state-of-the-art digital press, enabling the development of new print products and offering them to small businesses and corporate clients.<br>
+                <br>
+                </p>
+                <p class="autoshow">
+                From then on, the company has further diversified its portfolio by entering the large-format digital printing industry, acquiring a high- resolution large-format printer. 
+                This expansion provides our existing customers with an even wider range of solutions and creates new opportunities to enter different market segments.<br>
+                <br>
+                </p>
+                <p class="autoshow">
+                From its beginnings as a prepress service provider to its current status as a digital advertising print shop, PCPI has continued to evolve and grow. Our unwavering commitment to customer success has always been our top priority and has been instrumental in driving our growth and success.<br>
+                <br>
+                <br>
+                </p>
+        </section>
+        <section class="services-container" id="services">
+    <h2>OUR SERVICES</h2>
+    <div class="services">
+        <div class="service-box">
+            <h3>Commercial Printing</h3>
+            <a href="https://example.com" target="_blank">
+                <div class="image-wrapper">
+                    <img src="img/gani-billboard.jpg" alt="Gani" class="image">
+                </div>
+            </a>
+        </div>
+        
+        <div class="service-box">
+            <h3>Large Format Printing</h3>
+            <a href="https://example.com" target="_blank">
+                <div class="image-wrapper">
+                    <img src="img/gani-billboard.jpg" alt="Gani" class="image">
+                </div>
+            </a>
+        </div>
+
+        <div class="service-box">
+            <h3>Installation</h3>
+            <a href="https://example.com" target="_blank">
+                <div class="image-wrapper">
+                    <img src="img/gani-billboard.jpg" alt="Gani" class="image">
+                </div>
+            </a>
+        </div>
+    </div>
+    
+</section>
+        
+    </div>
+    <div class="wrapper">
+  <div class="item item1"><img src="img/pcpi_logo.png"></div>
+  <div class="item item2"><img src="img/pcpi_logo.png"></div>
+  <div class="item item3"><img src="img/pcpi_logo.png"></div>
+  <div class="item item4"><img src="img/pcpi_logo.png"></div>
+  <div class="item item5"><img src="img/pcpi_logo.png"></div>
+  <div class="item item6"><img src="img/pcpi_logo.png"></div>
+  <div class="item item7"><img src="img/pcpi_logo.png"></div>
+  <div class="item item8"><img src="img/pcpi_logo.png"></div>
+</div>
+    <footer>
+        <section class="fade-in" id="contact">
+            <h2 class="fade-in">CONTACT US</h2>
+            <p>Email: sales@primarycolorprints.com | Phone: (123) 456-7890</p>
+        </section>
+        <p><br>&copy; 2025 Primarycolor Prints Inc. All rights reserved.</p>
+        
+    </footer>
+    
+
+    <script>
+  const tooltip = document.getElementById('tooltip');
+  const serviceImages = document.querySelectorAll('.service-box .image');
+
+  document.addEventListener('mousemove', (e) => {
+    gsap.to(tooltip, { x: e.clientX, y: e.clientY, duration: 0.03, ease: 'power2.out' });
+  });
+
+  serviceImages.forEach(img => {
+    img.addEventListener('mouseenter', () => {
+      gsap.killTweensOf(tooltip);
+      gsap.set(tooltip, { opacity: 1, scaleY: 0, transformOrigin: 'top center' });
+      gsap.to(tooltip, {
+        scaleY: 1,
+        opacity: 1,
+        duration: 0.35,
+        ease: 'power2.out'
+      });
+    });
+
+    img.addEventListener('mouseleave', () => {
+      gsap.killTweensOf(tooltip);
+      gsap.to(tooltip, {
+        scaleY: 0,
+        opacity: 0,
+        duration: 0.25,
+        ease: 'power2.in'
+      });
+    });
+  });
+
+
+</script>
+    
+
+</body>
+</html>
